@@ -19,7 +19,9 @@
 ## Getting Started
 
 ### Camera Setup
-Start by duplicating your main camera. Then, in the inspector, set it's "Culling Mask" feild to only include the layer that all your masks are on. In the hierarchy window, make the second camera a child of the main camera, or use your own scripts to insure both camera's positions are always the same. Note, make sure your second camera's "clear flags" settings are clearing to full transparency, and if you change your main camera's orthographic size or field of vision, you will want to copy those changes to your second camera. Now add the "Cutout Setup" commponent to your second camera, and drag the second camera into the "Coutout Camera" field. Each time the window is resized, you will need to call the "GenerateRT" method inside the "CutoutSetup" script. It's worth noting, in the top right corner of unity's editor you can turn off the "masks" layer's visibility.
+Start by duplicating your main camera. Then, in the inspector, set it's "Culling Mask" feild to only include the layer that all your masks are on. In the hierarchy window, make the second camera a child of the main camera, or use your own scripts to insure both camera's positions are always the same. Note, make sure your second camera's "clear flags" settings are clearing to full transparency, and if you change your main camera's orthographic size or field of vision, you will want to copy those changes to your second camera. 
+
+Now add the "Cutout Setup" commponent to your second camera, and drag the second camera into the "Coutout Camera" field. Each time the window is resized, you will need to call the "GenerateRT" method inside the "CutoutSetup" script. It's worth noting, in the top right corner of unity's editor you can turn off the "masks" layer's visibility.
 
 #### Optional
 If you know how Render Textures work, you can make one with your preferred method, then assign it to the shader though Unity's SetGlobalTexture method. (See code for example)
