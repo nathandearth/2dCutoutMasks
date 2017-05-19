@@ -38,5 +38,5 @@ In Unity, create a new material. In the "Shader" dropdown menu, of the inspector
 ## License
 This software is released under the [MIT license](http://opensource.org/licenses/MIT).
 
-## Follow me here
+## Follow Me Here
 [Twitter](https://twitter.com/NathanLDearth)
