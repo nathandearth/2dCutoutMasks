@@ -19,9 +19,11 @@
 ## Getting Started
 
 ### Camera Setup
-Start by duplicating your main camera. Then, in the inspector, set it's "Culling Mask" feild to only include the layer that all your masks are on. Disable your masks layer in the main cameras culling settings. In the hierarchy window, make the second camera a child of the main camera, or use your own scripts so both camera's positions are always the same. Note, make sure your second camera's "clear flags" settings are clearing to full transparency, and if you change your main camera's orthographic size or field of vision, you will want to copy those changes to your second camera. 
+Start by duplicating your main camera. Then, in the inspector, set it's "Culling Mask" feild to only include the layer that all your masks are on. Make sure your second camera's "clear flags" settings are clearing to full transparency. Your second camera's position must always match your main camera's position. This can be done by setting the second camera to be a child of the main camera, or though scripts.
 
 Now add the "Cutout Setup" commponent to your second camera, and drag the second camera into the "Coutout Camera" field. Each time the game window is resized, you will need to call the "GenerateRT" method inside the "CutoutSetup" script. It's worth noting, in the top right corner of unity's editor you can turn off the "masks" layer's visibility.
+
+Next, in the main camrea's "Culling Mask" dropdown disable your masks layer. If you change your main camera's orthographic size or field of vision, you will want to copy those changes to your second camera.
 
 #### Optional
 If you know how Render Textures work, you can make one with your preferred method, then assign it to the shader though Unity's SetGlobalTexture method. (See code for example)
@@ -30,7 +32,7 @@ If you know how Render Textures work, you can make one with your preferred metho
 *2d Cutout Masks* uses images' alpha channel to cut out pixels. Full alpha range is supported, and you can make them in any shape or size you want. Make sure your image's "Alpha Source" settings are properly set, in the inspector.
 
 ### Materials
-In Unity, create a new material. In the "Shader" dropdown menu, of the inspector, chose CutoutMasks/Cutout. Adjust the options according to your needs, then drag the material to the sprites you want cut out.
+In Unity, create a new material. In the "Shader" dropdown menu, of the inspector, chose CutoutMasks/Cutout. Adjust the options according to your needs, then drag the material to the sprites you want to cut out.
 
 #### Material Options
 - Invert, switches between cutting out everything inside the mask, or outside the mask.
