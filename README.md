@@ -1,6 +1,3 @@
-## Features Trailer
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=VUusYgx3ecM" target="_blank"><img src="http://img.youtube.com/vi/VUusYgx3ecM/0.jpg" width="480" height="360" border="10" /></a>
-
 ## Introduction
 *2d Cutout Masks* is a shader for unity, that uses masks to cut out sprites. 
 
